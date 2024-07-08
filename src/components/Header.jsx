@@ -7,11 +7,13 @@ const Header = () => {
 		<header className="h-[72px] w-screen  bg-[#F8F8F8] border-b-[#860920] border-b-[1px]">
 			<nav className="px-5 lg:px-0 h-full w-full flex items-center justify-between lg:container lg:mx-auto">
 				<div className="flex items-center gap-4">
-					<img
-						src="/logo.png"
-						alt="Logo"
-						className="lg:w-[70px] lg:h-[60px]"
-					/>
+					<Link to="/" className="bg-inherit">
+						<img
+							src="/logo.png"
+							alt="Logo"
+							className="lg:w-[70px] lg:h-[60px]"
+						/>
+					</Link>
 				</div>
 				<div className="hidden lg:flex lg:h-[50px] lg:w-[450px] border border-[#860920]">
 					<input

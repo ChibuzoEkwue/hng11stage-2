@@ -8,7 +8,7 @@ const Header = () => {
 			<nav className="px-5 lg:px-0 h-full w-full flex items-center justify-between lg:container lg:mx-auto">
 				<div className="flex items-center gap-4">
 					<img
-						src="/public/logo.png"
+						src="/logo.png"
 						alt="Logo"
 						className="lg:w-[70px] lg:h-[60px]"
 					/>

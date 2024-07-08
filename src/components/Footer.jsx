@@ -3,7 +3,7 @@ const Footer = () => {
 		<footer className="w-full max-h-max bg-black text-white py-5">
 			<div className="flex flex-col gap-10 p-5 lg:container lg:mx-auto lg:flex-row">
 				<div className="flex flex-col gap-4 lg:flex-1">
-					<img src="/public/logo.png" className="w-[70px] h-[60px]" />
+					<img src="/logo.png" className="w-[70px] h-[60px]" />
 					<p className="text-justify text-[#AEAFB0]">
 						Timbu Cloud Shop offers a curated selection of high-quality products
 						at unbeatable prices. Find everything you need in one place. Shop

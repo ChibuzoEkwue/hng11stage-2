@@ -7,14 +7,14 @@ export const ITEMS = [
 		name: "Earthy Brown",
 		desc: "Stylish brown sneakers with a rustic feel, for a sophisticated look.",
 		price: 40,
-		image: "/public/pic1.png",
+		image: "/pic1.png",
 	},
 	{
 		id: 2,
 		name: "White & beige",
 		desc: "Stylish blue head warmer to keep you warm in the cold",
 		price: 20,
-		image: "/public/pic2.png",
+		image: "/pic2.png",
 	},
 ];
 

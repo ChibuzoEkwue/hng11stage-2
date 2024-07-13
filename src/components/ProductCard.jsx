@@ -19,7 +19,7 @@ const ProductCard = ({ name, desc, price, image, id }) => {
 	return (
 		<div className="h-[400px]  md:h-[400px] border-[1px] py-2 px-4 border-red-500 flex flex-col items-center justify-between">
 			<Link to={`/${id}`}>
-				<div className="w-[300px] h-[250px]">
+				<div className="w-full h-full">
 					<img
 						src={image}
 						alt={name}

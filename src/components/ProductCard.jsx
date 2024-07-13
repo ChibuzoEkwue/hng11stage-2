@@ -1,23 +1,45 @@
 import { ShoppingCart } from "lucide-react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
-const ProductCard = ({ name, desc, price, image }) => {
+const ProductCard = ({ name, desc, price, image, id }) => {
+	
+	const { addItem } = useContext(CartContext);
+	const addtoCart = () => {
+		addItem({
+			name,
+			id,
+			desc,
+			price,
+			image,
+			quantity: 1,
+		});
+	};
 	return (
-		<div className="h-[339px] w-[185px] lg:h-[490px] lg:w-[242px] border-[1px] p-2 border-red-500 flex flex-col items-center justify-between">
-			<div className="min-h-[200px] w-full lg:h-[297px]">
-				<img src={image} alt={name} className="object-contain w-full h-full" />
-			</div>
-			<div className="w-[170px] min-h-[32]">
-				<div className=" flex items-center justify-between">
-					<span className="text-[14px] lg:text-[18px]  font-[400]">{name}</span>
-					<span className="text-[14px] lg:text-[18px]  font-[400]">
-						${price}
-					</span>
+		<div className="h-[400px]  md:h-[400px] border-[1px] py-2 px-4 border-red-500 flex flex-col items-center justify-between">
+			<Link to={`/${id}`}>
+				<div className="w-[300px] h-[250px]">
+					<img
+						src={image}
+						alt={name}
+						className="object-contain w-full h-full"
+					/>
 				</div>
-				<p className="text-[12px] lg:text-[14px] font-[300] text-[#A6A7A9] w-full line-clamp-2">
+			</Link>
+			<div className="h-[32px] w-full">
+				<div className=" flex items-center justify-between text-[15px] lg:text-[18px]  font-[400]">
+					<span className="">{name}</span>
+					<span className="">${price}</span>
+				</div>
+				<p className="text-[13px] lg:text-[14px] font-[300] text-gray-500 w-full line-clamp-2">
 					{desc}
 				</p>
 			</div>
-			<button className="w-[85%] h-[40px] my-3 flex items-center justify-center bg-pink-100 gap-1 border-[1px] border-red-500">
+			<button
+				onClick={addtoCart}
+				className="w-full h-[40px] my-3 flex items-center justify-center bg-pink-100 gap-1 border-[1px] border-red-500"
+			>
 				<span className="text-[14px] text-[#860920]">ADD TO CART</span>
 				<span>
 					<ShoppingCart color="#860920" />

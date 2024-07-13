@@ -1,8 +1,15 @@
 import { Search, ShoppingCart, Menu, UserRound } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const Header = () => {
-	
+	const { items } = useContext(CartContext);
+
+	const numberOfCartItem = items.reduce((curNumber, item) => {
+		return curNumber + item.quantity;
+	}, 0);
+
 	return (
 		<header className="h-[72px] w-screen  bg-[#F8F8F8] border-b-[#860920] border-b-[1px]">
 			<nav className="px-5 lg:px-0 h-full w-full flex items-center justify-between lg:container lg:mx-auto">
@@ -41,7 +48,7 @@ const Header = () => {
 							<Link to="/cart" className="bg-inherit">
 								<ShoppingCart />
 								<div className="absolute top-[-17px] right-[-10px] bg-[#860920] rounded-full size-7 flex items-center justify-center text-white">
-									2
+									{numberOfCartItem}
 								</div>
 							</Link>
 						</div>

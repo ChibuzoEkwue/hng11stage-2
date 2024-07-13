@@ -7,7 +7,7 @@ const Layout = () => {
 	return (
 		<>
 			<Header />
-			<div className="container mx-auto ">
+			<div className="px-3 container mx-auto ">
 				<Outlet />
 			</div>
 			<Subscription />

@@ -12,6 +12,10 @@ const Cart = () => {
 		return curNumber + singleItem;
 	}, 0);
 
+	const numberOfCartItem = items.reduce((curNumber, item) => {
+		return curNumber + item.quantity;
+	}, 0);
+
 	const removeCartItem = (id) => {
 		removeItem(id);
 	};
@@ -43,7 +47,7 @@ const Cart = () => {
 					</div>
 				</div>
 
-				<h4 className="my-6 lg:hidden">Items(2)</h4>
+				<h4 className="my-6 lg:hidden">Items({numberOfCartItem})</h4>
 
 				<div className="flex flex-col gap-4">
 					{items.map((item) => (
